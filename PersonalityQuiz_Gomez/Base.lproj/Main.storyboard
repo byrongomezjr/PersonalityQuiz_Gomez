@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--IntroVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalityQuiz_Gomez" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroVC" customModule="PersonalityQuiz_Gomez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Start Quiz">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startQuizPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dT-FI-pPf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -75,17 +78,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="nQj-uN-481" kind="show" id="uJr-fZ-jn6"/>
+                        <segue destination="nQj-uN-481" kind="show" identifier="startQuiz" id="uJr-fZ-jn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--QuestionsVC-->
         <scene sceneID="9Zn-KP-cxA">
             <objects>
-                <viewController id="Jul-vd-czQ" sceneMemberID="viewController">
+                <viewController id="Jul-vd-czQ" customClass="QuestionsVC" customModule="PersonalityQuiz_Gomez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ajb-Xn-XLQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,21 +100,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="Jul-vd-czQ" eventType="touchUpInside" id="ukW-ZL-deo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c9-cc-6o8">
                                         <rect key="frame" x="0.0" y="54.333333333333371" width="75" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="Jul-vd-czQ" eventType="touchUpInside" id="wLf-xh-Sj4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugp-nq-Srn">
                                         <rect key="frame" x="0.0" y="108.66666666666669" width="75" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="Jul-vd-czQ" eventType="touchUpInside" id="jys-AR-1He"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-Zc-Mll">
                                         <rect key="frame" x="0.0" y="163" width="75" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="Jul-vd-czQ" eventType="touchUpInside" id="c74-T9-4MJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -180,6 +195,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="Jul-vd-czQ" eventType="touchUpInside" id="nR8-ka-ik7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -212,6 +230,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="Jul-vd-czQ" eventType="touchUpInside" id="4wF-Ve-fGl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -246,15 +267,29 @@
                             <constraint firstItem="VVB-u9-eOW" firstAttribute="leading" secondItem="ajb-Xn-XLQ" secondAttribute="leadingMargin" id="uC5-OL-Bbt"/>
                             <constraint firstItem="gvM-0T-uyr" firstAttribute="leading" secondItem="ajb-Xn-XLQ" secondAttribute="leadingMargin" id="vhR-iB-GiW"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="gvM-0T-uyr"/>
-                                <exclude reference="G8o-ce-2NA"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="seE-of-3Wn"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="9uZ-yR-2K2" id="5R0-8G-bCQ"/>
+                        <outlet property="multiLabel2" destination="1cL-cy-rU5" id="hLz-iQ-Esv"/>
+                        <outlet property="multiLabel3" destination="EmF-qI-kAt" id="TpZ-AV-gIt"/>
+                        <outlet property="multiLabel4" destination="imV-5s-O8B" id="hE8-86-Qq7"/>
+                        <outlet property="multiSwitch1" destination="j1s-ig-3qK" id="NwW-QG-AM6"/>
+                        <outlet property="multiSwitch2" destination="TmM-eQ-J4H" id="AAS-8p-4uh"/>
+                        <outlet property="multiSwitch3" destination="bnx-gl-BK8" id="rdc-ft-r5l"/>
+                        <outlet property="multiSwitch4" destination="rg1-Zv-xqR" id="Xjz-a7-YRJ"/>
+                        <outlet property="multipleStackView" destination="G8o-ce-2NA" id="qoX-Jc-i9I"/>
+                        <outlet property="progressView" destination="VVB-u9-eOW" id="cUK-JQ-QNN"/>
+                        <outlet property="questionLabel" destination="kwv-LI-HMm" id="LXm-hO-VWm"/>
+                        <outlet property="rangedLabel1" destination="l65-jz-Url" id="4z4-H0-ZSB"/>
+                        <outlet property="rangedLabel2" destination="WLR-R4-Fpi" id="bLC-WA-Jdy"/>
+                        <outlet property="rangedSlider" destination="yxv-lc-UcK" id="vnq-pF-KyQ"/>
+                        <outlet property="rangedStackView" destination="0Xp-G7-oa7" id="reS-QR-rTc"/>
+                        <outlet property="singleButton1" destination="E24-Xo-kQG" id="h31-1v-XaE"/>
+                        <outlet property="singleButton2" destination="1c9-cc-6o8" id="vy8-81-EQR"/>
+                        <outlet property="singleButton3" destination="ugp-nq-Srn" id="Ewa-EJ-dSr"/>
+                        <outlet property="singleButton4" destination="Meb-Zc-Mll" id="2qr-IA-sj5"/>
+                        <outlet property="singleStackView" destination="gvM-0T-uyr" id="DCc-An-uBv"/>
                         <segue destination="24o-j9-TIB" kind="show" id="rgo-l4-8pY"/>
                     </connections>
                 </viewController>
@@ -265,7 +300,7 @@
         <!--Results-->
         <scene sceneID="Vmx-EL-3eZ">
             <objects>
-                <viewController id="24o-j9-TIB" sceneMemberID="viewController">
+                <viewController id="24o-j9-TIB" customClass="ResultsVC" customModule="PersonalityQuiz_Gomez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Lv-GF-LxC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
