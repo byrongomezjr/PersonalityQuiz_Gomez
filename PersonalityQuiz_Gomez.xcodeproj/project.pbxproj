@@ -192,6 +192,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Byron Gomez";
 				TargetAttributes = {
 					F5BB20BC2A09D51F00DE4F9B = {
 						CreatedOnToolsVersion = 14.3;
