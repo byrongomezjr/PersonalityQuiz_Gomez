@@ -201,44 +201,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Xp-G7-oa7" userLabel="Ranged Answer Stack View">
-                                <rect key="frame" x="16" y="357" width="361" height="128.33333333333337"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yxv-lc-UcK">
-                                        <rect key="frame" x="-2" y="0.0" width="365" height="31"/>
-                                    </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="22W-7q-sg0">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="20.333333333333329"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l65-jz-Url">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLR-R4-Fpi">
-                                                <rect key="frame" x="319.66666666666669" y="0.0" width="41.333333333333314" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9k-eE-ghq">
-                                        <rect key="frame" x="0.0" y="90.333333333333314" width="361" height="38"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Submit Answer">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="rangedAnswerButtonPressed" destination="Jul-vd-czQ" eventType="touchUpInside" id="4wF-Ve-fGl"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="d9k-eE-ghq" firstAttribute="centerY" secondItem="0Xp-G7-oa7" secondAttribute="centerY" id="5eX-5v-uFp"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-LI-HMm">
                                 <rect key="frame" x="16" y="76" width="361" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -248,17 +210,52 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VVB-u9-eOW">
                                 <rect key="frame" x="16" y="818" width="361" height="4"/>
                             </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zOz-7l-LJf" userLabel="Ranged Answer Stack View">
+                                <rect key="frame" x="16" y="357" width="361" height="128.33333333333337"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-cf-x2F">
+                                        <rect key="frame" x="-2" y="0.0" width="365" height="31"/>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-sq-Zlc">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57l-nh-2TJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-LI-Iyl">
+                                                <rect key="frame" x="319.66666666666669" y="0.0" width="41.333333333333314" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oki-oU-pte">
+                                        <rect key="frame" x="0.0" y="90.333333333333314" width="361" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Submit Answer">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="Jul-vd-czQ" eventType="touchUpInside" id="vuT-cn-J9z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NFz-0V-Ii2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zOz-7l-LJf" firstAttribute="leading" secondItem="ajb-Xn-XLQ" secondAttribute="leadingMargin" id="1f0-ua-Wd6"/>
                             <constraint firstItem="NFz-0V-Ii2" firstAttribute="bottom" secondItem="VVB-u9-eOW" secondAttribute="bottom" constant="20" id="2q5-Xy-SPh"/>
                             <constraint firstItem="kwv-LI-HMm" firstAttribute="top" secondItem="NFz-0V-Ii2" secondAttribute="top" constant="20" id="43x-tx-Psy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zOz-7l-LJf" secondAttribute="trailing" id="8k7-he-Ped"/>
                             <constraint firstItem="kwv-LI-HMm" firstAttribute="leading" secondItem="ajb-Xn-XLQ" secondAttribute="leadingMargin" id="CJZ-hd-Ggw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Xp-G7-oa7" secondAttribute="trailing" id="EXp-3q-2lx"/>
+                            <constraint firstItem="zOz-7l-LJf" firstAttribute="centerY" secondItem="ajb-Xn-XLQ" secondAttribute="centerY" id="E62-qe-YvT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kwv-LI-HMm" secondAttribute="trailing" id="KJE-Z2-IcF"/>
-                            <constraint firstItem="0Xp-G7-oa7" firstAttribute="centerY" secondItem="ajb-Xn-XLQ" secondAttribute="centerY" id="MXW-PQ-29O"/>
-                            <constraint firstItem="0Xp-G7-oa7" firstAttribute="leading" secondItem="ajb-Xn-XLQ" secondAttribute="leadingMargin" id="Ode-i8-hmO"/>
                             <constraint firstItem="gvM-0T-uyr" firstAttribute="centerY" secondItem="ajb-Xn-XLQ" secondAttribute="centerY" id="Wch-rA-m6k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VVB-u9-eOW" secondAttribute="trailing" id="dAH-ke-Kty"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G8o-ce-2NA" secondAttribute="trailing" id="hVj-1J-gza"/>
@@ -281,16 +278,16 @@
                         <outlet property="multipleStackView" destination="G8o-ce-2NA" id="qoX-Jc-i9I"/>
                         <outlet property="progressView" destination="VVB-u9-eOW" id="cUK-JQ-QNN"/>
                         <outlet property="questionLabel" destination="kwv-LI-HMm" id="LXm-hO-VWm"/>
-                        <outlet property="rangedLabel1" destination="l65-jz-Url" id="4z4-H0-ZSB"/>
-                        <outlet property="rangedLabel2" destination="WLR-R4-Fpi" id="bLC-WA-Jdy"/>
-                        <outlet property="rangedSlider" destination="yxv-lc-UcK" id="vnq-pF-KyQ"/>
-                        <outlet property="rangedStackView" destination="0Xp-G7-oa7" id="reS-QR-rTc"/>
+                        <outlet property="rangedLabel1" destination="57l-nh-2TJ" id="XJ6-lO-dPr"/>
+                        <outlet property="rangedLabel2" destination="AUe-LI-Iyl" id="JCy-i8-Q4i"/>
+                        <outlet property="rangedSlider" destination="Bys-cf-x2F" id="Kgw-Z0-Qsb"/>
+                        <outlet property="rangedStackView" destination="zOz-7l-LJf" id="alN-9E-GNe"/>
                         <outlet property="singleButton1" destination="E24-Xo-kQG" id="h31-1v-XaE"/>
                         <outlet property="singleButton2" destination="1c9-cc-6o8" id="vy8-81-EQR"/>
                         <outlet property="singleButton3" destination="ugp-nq-Srn" id="Ewa-EJ-dSr"/>
                         <outlet property="singleButton4" destination="Meb-Zc-Mll" id="2qr-IA-sj5"/>
                         <outlet property="singleStackView" destination="gvM-0T-uyr" id="DCc-An-uBv"/>
-                        <segue destination="24o-j9-TIB" kind="show" id="rgo-l4-8pY"/>
+                        <segue destination="24o-j9-TIB" kind="show" identifier="ResultsSegue" id="rgo-l4-8pY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKd-Kd-nHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -332,10 +329,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="kDL-5Y-yNb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IY9-NX-GCe"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IY9-NX-GCe">
+                            <connections>
+                                <segue destination="Rr6-HV-akN" kind="unwind" unwindAction="unwindToIntroVCWithSegue:" id="Bxp-q1-MgP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultDefinition" destination="AfC-6V-a74" id="V2X-FV-SWu"/>
+                        <outlet property="resultLabel" destination="yX3-HI-D6B" id="e5Z-U8-egK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZD-dA-sm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Rr6-HV-akN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2466" y="4"/>
         </scene>

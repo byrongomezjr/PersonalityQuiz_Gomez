@@ -32,11 +32,9 @@ class QuestionsVC: UIViewController {
     @IBOutlet weak var multiSwitch3: UISwitch!
     @IBOutlet weak var multiSwitch4: UISwitch!
     
-    
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
-    
     @IBOutlet weak var rangedSlider: UISlider!
     
     
@@ -53,7 +51,7 @@ class QuestionsVC: UIViewController {
             Answer(text: "Steak", type: .dog),
             Answer(text: "Fish", type: .cat),
             Answer(text: "Corn", type: .turtle),
-            Answer(text: "Carrots", type: .rabbit),
+            Answer(text: "Carrots", type: .rabbit)
         ]),
         Question(text: "which activities do you enjoy?", type: .multiple, answers: [
             Answer(text: "Swimming", type: .turtle),
@@ -107,15 +105,20 @@ class QuestionsVC: UIViewController {
     }
     func updateMultipleStack(using answers: [Answer]) {
         multipleStackView.isHidden = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         multiLabel1.text = answers[0].text
-        multiLabel2.text = answers[0].text
-        multiLabel3.text = answers[0].text
-        multiLabel4.text = answers[0].text
+        multiLabel2.text = answers[1].text
+        multiLabel3.text = answers[2].text
+        multiLabel4.text = answers[3].text
     }
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangedSlider.setValue(0.5, animated: false)
         rangedLabel1.text = answers.first?.text
-        rangedLabel1.text = answers.last?.text
+        rangedLabel2.text = answers.last?.text
     }
     
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
@@ -127,9 +130,9 @@ class QuestionsVC: UIViewController {
         case singleButton2:
             chosenAnswers.append(currentAnswers[1])
         case singleButton3:
-            chosenAnswers.append(currentAnswers[3])
+            chosenAnswers.append(currentAnswers[2])
         case singleButton4:
-            chosenAnswers.append(currentAnswers[4])
+            chosenAnswers.append(currentAnswers[3])
         default:
             break
         }
@@ -161,9 +164,21 @@ class QuestionsVC: UIViewController {
         nextQuestion()
     }
     
-    
     func nextQuestion() {
+        questionIndex += 1
         
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            let resultsViewController = segue.destination as! ResultsVC
+            resultsViewController.responses = chosenAnswers
+        }
     }
     
 }
